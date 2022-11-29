@@ -7,11 +7,7 @@ class AuthorSerializer(serializers.ModelSerializer):
     # Post 모델의 fk author을 중첩된 serializer를 통해서 구현
     class Meta:
         model = get_user_model()
-        fields = [
-            'username',
-            'email'
-        ]
-
+        fields = ["username", "email"]
 
 
 class Postserializer(serializers.ModelSerializer):
@@ -22,12 +18,10 @@ class Postserializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = [
-            'pk',
-            'author',
-            'title',
-            'content',
-            'created_at',
-            'updated_at',
-
+            "pk",
+            "author",
+            "title",
+            "content",
+            "created_at",
+            "updated_at",
         ]
-
